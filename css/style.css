@@ -367,14 +367,15 @@ header.active {
         opacity: 0;
     }
 }
-.lead svg{
+
+.lead svg {
     font-family: "Great Vibes", cursive;
     position: absolute;
     z-index: 1100;
     fill: currentColor;
     height: auto;
     max-width: 20vmin;
-    transform-origin:center ;
+    transform-origin: center;
     width: 66%;
     animation: spin 10s linear infinite;
 }
@@ -385,6 +386,32 @@ header.active {
     }
 
     to {
-       transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
     }
+}
+
+/* section general */
+section {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 100vh;
+    bottom: 0;
+    background: #ffffff;
+    transition: ease-in-out 1s;
+    transform-origin: bottom;
+    z-index: 1100;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+section.section-show {
+    padding: 150px 100px 100px;
+    top: 0;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: visible;
+    opacity: 1;
 }
