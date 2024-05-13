@@ -18,8 +18,9 @@
 <body>
   <header>
     <a href="/" class="logo">Wedding</a>
-    <a href="#" class="menu">
-      <ion-icon name="menu-outline"></ion-icon>
+    <a href="#" class="menu" onclick="toggleMenu();">
+      <ion-icon class="open" name="menu-outline"></ion-icon>
+      <ion-icon class="close" name="close-outline"></ion-icon>
     </a>
     <ul class="nav">
       <li>
@@ -39,6 +40,20 @@
       <ion-icon name="search-outline"></ion-icon>
     </div>
   </header>
+  <!-- mobile navigation -->
+  <ul class="nav-mobile">
+    <li>
+      <a class="nav-btn active" href="#" onclick="resetHeader();">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </li>
+    <li><a class="nav-btn" href="#" data-target="about">about</a></li>
+    <li><a class="nav-btn" href="#" data-target="services">services</a></li>
+    <li>
+      <a class="nav-btn" href="#" data-target="portfolio">Portfolio</a>
+    </li>
+    <li><a class="nav-btn" href="#" data-target="contact">contact</a></li>
+  </ul>
 
   <!-- banner -->
   <div class="banner container-fluid">
@@ -408,7 +423,64 @@
       </div>
     </section>
     <!-- contact section -->
-    <section id="contact" class="contact"></section>
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <h1>Contact Us</h1>
+          <!-- insert your map here, Google map embedment -->
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3953.5814168098073!2d113.49416927500432!3d-7.727977692290276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDMnNDAuNyJTIDExM8KwMjknNDguMyJF!5e0!3m2!1sid!2sid!4v1715617853332!5m2!1sid!2sid"
+              width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" frameborder="0">
+            </iframe>
+          </div>
+          <div class="row mt-5">
+            <div class="col-lg-4">
+              <div class="info">
+                <div class="address">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <h4>Location :</h4>
+                  <p>Street Name, City Name, State, 123456</p>
+                </div>
+                <div class="email">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <h4>Email :</h4>
+                  <p>info@example.com</p>
+                </div>
+                <div class="phone">
+                  <ion-icon name="call-outline"></ion-icon>
+                  <h4>Call :</h4>
+                  <p>+6282 333 444 555</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 mt-5 mt-lg-0">
+              <form action="#">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"
+                    required></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- javascript vendors -->
